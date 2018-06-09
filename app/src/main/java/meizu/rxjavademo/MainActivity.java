@@ -19,13 +19,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mBtnTest = findViewById(R.id.id_btn_test);
         mBtnTest.setOnClickListener(this);
 
-        Test1.test();
+        test();
     }
 
     @Override
     public void onClick(View v) {
         if (v == mBtnTest) {
-            Test1.test();
+            test();
         }
+    }
+
+    private void test() {
+        //Test1.test();
+
+        Test2.test();
     }
 }
