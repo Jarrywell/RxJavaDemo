@@ -17,6 +17,9 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * https://www.jianshu.com/p/8ee8fe70aacc
+ */
 public class Test1 {
     private static final String TAG = "TestRxJava";
 

@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void test() {
         //Test1.test();
 
-        Test2.test();
+        //Test2.test();
+
+        Test3.test();
+
     }
 }

@@ -15,6 +15,9 @@ import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 
+/**
+ * https://www.jianshu.com/p/2ddd9bb8b1d7
+ */
 public class Test2 {
     private static final String TAG = "TestRxJava";
 
