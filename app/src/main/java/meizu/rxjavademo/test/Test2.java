@@ -1,4 +1,4 @@
-package meizu.rxjavademo;
+package meizu.rxjavademo.test;
 
 
 import java.util.ArrayList;
@@ -14,6 +14,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.BiFunction;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
+import meizu.rxjavademo.DLog;
 
 /**
  * https://www.jianshu.com/p/2ddd9bb8b1d7

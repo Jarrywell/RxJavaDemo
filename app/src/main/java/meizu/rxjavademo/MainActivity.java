@@ -1,14 +1,15 @@
 package meizu.rxjavademo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private static final String TAG = "TestRxJava";
+import meizu.rxjavademo.test.Test3;
 
-    private Button mBtnTest;
+public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "TestRxJava";
 
 
     @Override
@@ -16,19 +17,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mBtnTest = findViewById(R.id.id_btn_test);
-        mBtnTest.setOnClickListener(this);
+        findViewById(R.id.id_btn_test).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                test();
+            }
+        });
 
-        test();
+        findViewById(R.id.id_btn_interval).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), IntervalActivity.class));
+            }
+        });
     }
 
-    @Override
-    public void onClick(View v) {
-        if (v == mBtnTest) {
-            test();
-        }
-    }
 
+    /**
+     * 简单调用测试
+     */
     private void test() {
         //Test1.test();
 

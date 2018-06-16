@@ -1,4 +1,4 @@
-package meizu.rxjavademo;
+package meizu.rxjavademo.test;
 
 
 
@@ -16,6 +16,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
+import meizu.rxjavademo.DLog;
 
 /**
  * https://www.jianshu.com/p/8ee8fe70aacc
