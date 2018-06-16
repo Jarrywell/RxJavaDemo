@@ -1,4 +1,4 @@
-package meizu.rxjavademo;
+package meizu.rxjavademo.internal;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +12,9 @@ import io.reactivex.ObservableSource;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Function;
+import meizu.rxjavademo.DLog;
+import meizu.rxjavademo.R;
+import meizu.rxjavademo.Subscribes;
 
 
 /**

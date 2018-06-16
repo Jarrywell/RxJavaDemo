@@ -31,6 +31,13 @@
             android:text="轮询测试"
             />
 
+        <Button
+            android:id="@+id/id_btn_retry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="错误重试"
+            />
+
     </LinearLayout>
 
 </ScrollView>

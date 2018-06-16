@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".IntervalActivity" android:enabled="true"/>
+        <activity android:name=".internal.IntervalActivity" android:enabled="true"/>
+        <activity android:name=".internal.RetryWhenActivity" android:enabled="true"/>
     </application>
 
 </manifest>
