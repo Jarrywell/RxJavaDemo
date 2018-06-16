@@ -38,6 +38,13 @@
             android:text="错误重试"
             />
 
+        <Button
+            android:id="@+id/id_btn_combinelatest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="同时校验多个条件"
+            />
+
     </LinearLayout>
 
 </ScrollView>

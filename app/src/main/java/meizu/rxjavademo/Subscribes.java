@@ -19,7 +19,10 @@ public class Subscribes {
 
     public <T> DisposableObserver<T> subscribe(Observable<T> observable) {
         DisposableObserver<T> observer = createDisposableObserver();
+        return subscribe(observable, observer);
+    }
 
+    public <T> DisposableObserver<T> subscribe(Observable<T> observable, DisposableObserver<T> observer) {
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(observer);
@@ -27,6 +30,7 @@ public class Subscribes {
 
         return observer;
     }
+
 
     public void release() {
         if (mCompositeDisposable != null) {

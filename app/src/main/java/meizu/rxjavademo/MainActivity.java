@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import meizu.rxjavademo.internal.CombineLatestActivity;
 import meizu.rxjavademo.internal.IntervalActivity;
 import meizu.rxjavademo.internal.RetryWhenActivity;
 import meizu.rxjavademo.test.Test3;
@@ -38,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), RetryWhenActivity.class));
             }
         });
+
+        findViewById(R.id.id_btn_combinelatest).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), CombineLatestActivity.class));
+            }
+        });
+
+
     }
 
 
