@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import meizu.rxjavademo.internal.CacheActivity;
 import meizu.rxjavademo.internal.CombineLatestActivity;
 import meizu.rxjavademo.internal.IntervalActivity;
 import meizu.rxjavademo.internal.RetryWhenActivity;
@@ -44,6 +45,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), CombineLatestActivity.class));
+            }
+        });
+
+        findViewById(R.id.id_btn_cache).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), CacheActivity.class));
             }
         });
 
