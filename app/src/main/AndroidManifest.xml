@@ -23,6 +23,7 @@
         <activity android:name=".internal.RetryWhenActivity" android:enabled="true"/>
         <activity android:name=".internal.CombineLatestActivity" android:enabled="true"/>
         <activity android:name=".internal.CacheActivity" android:enabled="true"/>
+        <activity android:name=".internal.TokenActivity" android:enabled="true"/>
     </application>
 
 </manifest>

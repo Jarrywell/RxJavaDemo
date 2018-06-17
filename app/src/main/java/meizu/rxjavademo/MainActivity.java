@@ -9,6 +9,7 @@ import meizu.rxjavademo.internal.CacheActivity;
 import meizu.rxjavademo.internal.CombineLatestActivity;
 import meizu.rxjavademo.internal.IntervalActivity;
 import meizu.rxjavademo.internal.RetryWhenActivity;
+import meizu.rxjavademo.internal.TokenActivity;
 import meizu.rxjavademo.test.Test3;
 
 public class MainActivity extends AppCompatActivity {
@@ -52,6 +53,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), CacheActivity.class));
+            }
+        });
+
+        findViewById(R.id.id_btn_token).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), TokenActivity.class));
             }
         });
 
