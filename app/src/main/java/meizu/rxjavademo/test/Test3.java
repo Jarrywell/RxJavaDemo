@@ -27,12 +27,11 @@ public class Test3 {
 
 
     public static void test() {
-        //test1();
-
+        test1();
         //test2();
-
         //test3();
-        test4();
+        //test4();
+        //test5();
     }
 
 
@@ -287,4 +286,43 @@ public class Test3 {
             }
         });
     }
+
+
+
+    private static void test5() {
+        Observable<Integer> observable1 = Observable.create(new ObservableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(ObservableEmitter<Integer> emitter) throws Exception {
+                for (int i = 0; ; i++) {   //无限循环发事件
+                    emitter.onNext(i);
+                }
+            }
+        }).subscribeOn(Schedulers.io());
+
+        Observable<String> observable2 = Observable.create(new ObservableOnSubscribe<String>() {
+            @Override
+            public void subscribe(ObservableEmitter<String> emitter) throws Exception {
+                emitter.onNext("A");
+            }
+        }).subscribeOn(Schedulers.io());
+
+        Observable.zip(observable1, observable2, new BiFunction<Integer, String, String>() {
+            @Override
+            public String apply(Integer integer, String s) throws Exception {
+                return integer + s;
+            }
+        }).observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<String>() {
+            @Override
+            public void accept(String s) throws Exception {
+                DLog.i(TAG, s);
+            }
+        }, new Consumer<Throwable>() {
+            @Override
+            public void accept(Throwable throwable) throws Exception {
+                DLog.i(TAG, "", throwable);
+            }
+        });
+
+    }
+
 }

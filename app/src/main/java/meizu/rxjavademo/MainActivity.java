@@ -15,7 +15,6 @@ import meizu.rxjavademo.test.Test3;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "TestRxJava";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,19 +62,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
 
-    /**
-     * 简单调用测试
-     */
+
+
     private void test() {
         //Test1.test();
 
         //Test2.test();
 
-        Test3.test();
+        //Test3.test();
 
+        //Test4.test();
+
+        Test5.test();
     }
 }
